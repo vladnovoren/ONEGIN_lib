@@ -2,6 +2,11 @@
 #define ONEGIN_STRUCTS_HPP
 
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+
+
 struct Str {
   char   *c_str;
   size_t    len;
@@ -10,6 +15,7 @@ struct Str {
 struct StrArr {
   Str      *arr;
   size_t n_strs;
+  size_t   size;
 };
 
 
