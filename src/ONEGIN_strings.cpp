@@ -72,3 +72,15 @@ size_t SkipSymbols(const char **crg, int (*cmp)(int)) {
 
   return n_skipped; 
 }
+
+
+int CompStrs(const void* str1, const void* str2) {
+    assert(str1);
+    assert(str2);
+
+    const Str* casted_str1 = (const Str*)str1,
+             * casted_str2 = (const Str*)str2;
+
+    return strcmp(casted_str1->c_str, casted_str2->c_str);
+}
+

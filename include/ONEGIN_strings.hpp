@@ -22,5 +22,6 @@ size_t SkipSymbols(const char **crg, const char symb);
 
 size_t SkipSymbols(const char **crg, int (*cmp)(int));
 
+int CompStrs(const void* str1, const void* str2);
 
 #endif /* ONEGIN_strings.hpp */
