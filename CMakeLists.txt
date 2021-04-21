@@ -14,5 +14,3 @@ SET_TARGET_PROPERTIES(ONEGIN_lib PROPERTIES PREFIX "")
 
 include_directories(OBEGIN_lib include/)
 
-target_link_libraries(test ONEGIN_lib)
-
