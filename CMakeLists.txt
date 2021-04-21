@@ -14,6 +14,5 @@ SET_TARGET_PROPERTIES(ONEGIN_lib PROPERTIES PREFIX "")
 
 include_directories(OBEGIN_lib include/)
 
-add_executable(test src/test.cpp)
 target_link_libraries(test ONEGIN_lib)
 
