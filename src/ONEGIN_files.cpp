@@ -1,4 +1,4 @@
-#include "../include/ONEGIN_files.hpp"
+#include "ONEGIN_files.h"
 
 
 FILE *OpenFile(const char *file_name, const char *mode) {

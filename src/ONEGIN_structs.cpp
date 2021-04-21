@@ -1,4 +1,4 @@
-#include "../include/ONEGIN_structs.hpp"
+#include "ONEGIN_structs.h"
 
 
 

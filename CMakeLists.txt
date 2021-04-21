@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.16.3)
 
 project(ONEGIN_lib)
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libs)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libs)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 set(ONEGIN_SOURCE src/ONEGIN_files.cpp src/ONEGIN_strings.cpp src/ONEGIN_structs.cpp)
 
@@ -11,11 +14,6 @@ SET_TARGET_PROPERTIES(ONEGIN_lib PROPERTIES PREFIX "")
 
 include_directories(OBEGIN_lib include/)
 
+add_executable(test src/test.cpp)
+target_link_libraries(test ONEGIN_lib)
 
-install(
-    TARGETS ONEGIN_lib
-    RUNTIME DESTINATION       "${PROJECT_SOURCE_DIR}/bin"
-    LIBRARY DESTINATION       "${PROJECT_SOURCE_DIR}/libs"
-    ARCHIVE DESTINATION       "${PROJECT_SOURCE_DIR}/libs"
-    PUBLIC_HEADER DESTINATION "${PROJECT_SOURCE_DIR}/include"
-)
